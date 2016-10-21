@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title 登录
+		script(type='text/javascript').
+			(function (doc, win) {
+			  var docEl = doc.documentElement,
+			    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			    recalc = function () {
+			      var clientWidth = docEl.clientWidth;
+			      if (!clientWidth) return;
+			      docEl.style.fontSize = 100 + 'px';
+			    };
+			
+			  if (!doc.addEventListener) return;
+			  win.addEventListener(resizeEvt, recalc, false);
+			  doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		script(type='text/javascript',src='../dist/js/particles.js')
+		script(type='text/javascript',src='../dist/js/login.js')
+
+	body
+		canvas#canvas
+		section#login
+			header 用户登录
+			div
+				label(for="user") 用户名
+				input(id='user',type='text',placeholder='请输入登录名')
+			div
+				label(for="pswd") 密码
+				input(id='pswd',type='password',placeholder='请输入密码')
+			button#btn 登录

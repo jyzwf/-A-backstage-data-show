@@ -1,0 +1,23 @@
+$white:#fff;
+$bg-color:#0e151f;
+$hover:#e43c59;
+#left_nav{
+	width:2rem;
+	padding:0.2rem 0;
+	background:$bg-color;
+	position:fixed;
+	left:0;
+	top:0.55rem;
+	bottom:0;
+
+	a{
+		text-align:center;
+		display:block;
+		width:100%;
+		padding:0.1rem 0;
+		color:$white;
+		&:hover{
+			background:$hover;
+		}
+	}
+}

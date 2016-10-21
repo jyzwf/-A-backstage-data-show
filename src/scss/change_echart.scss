@@ -1,0 +1,42 @@
+$border-color:#c9cace;
+$active-color:#576477;
+$white:#fff;
+#change_echart{
+	margin-bottom:0.2rem;
+	p{
+		font-size:0;
+		display:flex;
+		align-items:center;
+		height:0.3rem;
+	}
+
+	*{
+		display:inline-block;
+		height:0.3rem;
+		line-height:0.3rem;
+	}
+	
+	select,span{
+		appearance: none;
+    	border: none;
+    	background: transparent;
+    	font-size: 0.16rem;
+    	padding:0 0.2rem;
+    	outline:none;
+    	border:1px solid $border-color;
+    	cursor:pointer;
+	}
+
+	span.active{
+		background:$active-color;
+		color:$white;
+	}
+		
+	select.hide{
+		display:none;
+	}
+
+	span:nth-of-type(2),select{
+		border-left:0
+	}
+}

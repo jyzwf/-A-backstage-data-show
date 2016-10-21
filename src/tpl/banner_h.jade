@@ -1,0 +1,5 @@
+#total_show
+	each item in [{name:'总使用量',val:'1000',id:'count'},{name:'总收益',val:'1000',id:'money'}]
+		div
+			p #{item.name}
+			p(id='#{item.id}') #{item.val}

@@ -1,0 +1,12 @@
+#change_time
+	#time
+		- var date = new Date(),y = date.getFullYear(),t_m = date.getMonth() + 1, m =t_m<10? '0'+t_m : t_m,t_d = date.getDate(),d = t_d<10? '0'+t_d : t_d,max_d = '' + y+'-'+m+'-'+d;
+		input(type="date",max=max_d,id='begin_date')
+		input(type="date",max=max_d,id='end_date')
+		button#search 查询
+	#buildings
+			input#all_select(type='checkbox',name='buildings')
+			| 全选
+			each b in [1,2,3,4,5,6,7,8,9]
+				input(type='checkbox',name='building',value='#{b}')
+				| #{b}

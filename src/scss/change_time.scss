@@ -1,0 +1,22 @@
+$bg-color:#336699;
+$white:#fff;
+
+#change_time{
+	margin-bottom:0.2rem;
+	#time{
+		margin-bottom:0.15rem;
+		button{
+			appearance: none;
+    		border: none;
+    		background: $bg-color;
+    		padding:0.04rem 0.08rem;
+			color:$white;
+			cursor:pointer;
+			margin-left:0.2rem;
+		}
+	}
+
+	#buildings{
+		font-size:0.15rem;
+	}
+}

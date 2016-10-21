@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+    <script type="text/javascript">
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 100 + 'px';
+          };
+      
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+    </script>
+    <script type="text/javascript" src="../dist/js/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h3>洗衣机</h3><span id="logout">退出</span>
+    </header>
+    <section id="container">
+      <div id="left_nav">
+        <ul>
+          <li><a href="./index.html">首页 </a></li>
+          <li><a href="./history.html">历史记录 </a></li>
+        </ul>
+      </div>
+      <div id="main_content">
+        <div id="total_show">
+          <div>
+            <p>总使用量</p>
+            <p>1000</p>
+          </div>
+          <div>
+            <p>总收益</p>
+            <p>1000</p>
+          </div>
+          <div>
+            <p>今日使用量</p>
+            <p>1000</p>
+          </div>
+          <div>
+            <p>今日收益</p>
+            <p>1000</p>
+          </div>
+        </div>
+        <div id="change_echart">
+          <p><span id="all_building" class="active">所有楼</span><span id="single_building">单栋楼</span>
+            <select id="select_b" class="hide">
+              <option value="" selected disabled>请选择楼号</option>
+              <option value="1">1号楼</option>
+              <option value="2">2号楼</option>
+              <option value="6">6号楼</option>
+            </select>
+          </p>
+        </div>
+        <div id="building" style="height:4rem;"></div>
+      </div>
+    </section>
+  </body>
+</html>

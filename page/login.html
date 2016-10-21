@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <script type="text/javascript">
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 100 + 'px';
+          };
+      
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+    </script>
+    <script type="text/javascript" src="../dist/js/particles.js"></script>
+    <script type="text/javascript" src="../dist/js/login.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <section id="login">
+      <header>用户登录</header>
+      <div>
+        <label for="user">用户名</label>
+        <input id="user" type="text" placeholder="请输入登录名">
+      </div>
+      <div>
+        <label for="pswd">密码</label>
+        <input id="pswd" type="password" placeholder="请输入密码">
+      </div>
+      <button id="btn">登录</button>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+$border1:#0e151f;
+$white:#fff;
+$btn:#000;
+
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background:$white;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		background:rgba(255,255,255,.8);
+		z-index:1;
+	}
+}
+
+canvas{
+	position:fixed;
+	left:0;
+	top:0;
+}
+
+#login{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	padding:0.2rem;
+	width:4rem;
+	z-index:1;
+	header{
+		padding-bottom:0.1rem;
+		margin-bottom:0.3rem;
+		font-size:0.4rem;
+		border-bottom:1px solid $btn;
+	}
+	
+	div{
+		margin-bottom:0.15rem;
+	}
+
+	label{
+		display:block;
+		margin-bottom:0.1rem;
+	}
+
+	input{
+		border:none;
+		border-bottom:1px solid $btn;
+		height:0.4rem;
+		padding:0.08rem 0;
+		font-size:.2rem;
+		width: 100%;
+		outline:none;
+		background:transparent;
+	}
+
+	button{
+		border:none;
+		outline:none;
+		height:0.4rem;
+		border:1px solid $btn;
+		color:$btn;
+		font-size:0.2rem;
+		appearance:none;
+		background:transparent;
+		border-radius:0.04rem;
+		cursor:pointer;
+		margin-top:0.25rem;
+	}
+
+
+}

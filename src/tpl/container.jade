@@ -1,0 +1,9 @@
+section#container
+	#left_nav
+		ul
+			- var items = [{name:'首页',href:'./index.html'},{name:'历史记录',href:'./history.html'}];
+			each item in items
+				li
+					a(href="#{item.href}") #{item.name} 
+
+	block main_content

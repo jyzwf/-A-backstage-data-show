@@ -1,0 +1,30 @@
+$bg-color:#293c55;
+$white:#fff;
+$hover:#e43c59;
+header{
+	position:fixed;
+	display:flex;
+	z-index: 99;
+	width:100%;
+	height:0.55rem;
+	font-size:0.2rem;
+	padding:0 0.25rem;
+	justify-content:space-between;
+	align-items:center;
+	background:$bg-color;
+	color:$white;
+	border-bottom:1px solid $white;
+	overflow:hidden;
+	h3{
+		margin:0;
+	}
+
+	span{
+		line-height:0.55rem;
+		padding:0 0.1rem;
+		cursor:pointer;
+		&:hover{
+			background:$hover;
+		}
+	}
+}

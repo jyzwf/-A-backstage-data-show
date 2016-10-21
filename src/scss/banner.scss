@@ -1,0 +1,21 @@
+$color-list:(1:#666666,2:#666699,3:#6666CC,4:#6666FF);
+$white:#fff;
+#total_show{
+	display:flex;
+	margin-bottom:0.2rem;
+	@each $k,$color in $color-list{
+		div:nth-of-type(#{$k}){
+			flex:1;
+			padding:0.4rem;
+			display:flex;
+			align-items:center;
+			flex-direction:column;
+			justify-content:center;
+			background:#{$color};
+			*{
+				color:$white;
+			}
+		}
+	}
+	
+}
